@@ -1,7 +1,15 @@
 class Solution {
     public int solution(int angle) {
         if(0 < angle && angle <= 180) {
-            return angle == 180 ? 4 : angle > 90 ? 3 : angle == 90 ? 2 : 1; 
+            if(angle == 180) {
+                return 4;
+            } else if(angle > 90) {
+                return 3;
+            } else if(angle == 90) {
+                return 2;
+            } else {
+                return 1;
+            }
         }
         return -1;
     }
