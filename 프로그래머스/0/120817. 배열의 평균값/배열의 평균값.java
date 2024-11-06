@@ -1,6 +1,7 @@
 class Solution {
     public double solution(int[] numbers) {
-        double sum = 0, l = numbers.length;
+        double sum = 0;
+        int l = numbers.length;
         
         if(1 <= l && l <= 100) {
             for(int n : numbers) {
@@ -8,7 +9,9 @@ class Solution {
                     sum += n;
                 }
             }
-            return sum / l;
+            if(sum / l * 10 % 5 == 0) {
+                return sum / l;   
+            }
         }
         return -1;
     }
