@@ -1,8 +1,12 @@
 class Solution {
     public int solution(int price) {
-        return price >= 500000 ? price * 80 / 100 : 
-               price >= 300000 ? price * 90 / 100 : 
-               price >= 100000 ? price * 95 / 100 : 
-               price;
+        if(price >= 500000) {
+            return price * 80 / 100;
+        } else if(price >= 300000) {
+            return price * 90 / 100;
+        } else if(price >= 100000) {
+            return price * 95 / 100;
+        }
+        return price;
     }
 }
