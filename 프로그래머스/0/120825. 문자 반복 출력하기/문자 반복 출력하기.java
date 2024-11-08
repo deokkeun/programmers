@@ -1,9 +1,10 @@
 class Solution {
     public String solution(String my_string, int n) {
-        StringBuffer sb = new StringBuffer();
-        for(char c : my_string.toCharArray()) {
-            sb.append(String.valueOf(c).repeat(n));
+        String answer = "";
+        String[] str = my_string.split("");
+        for(int i=0; i<my_string.length(); i++){
+            answer += str[i].repeat(n);
         }
-        return sb.toString();
+        return answer;
     }
 }
