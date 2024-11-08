@@ -1,7 +1,13 @@
-import java.util.stream.Collectors;
-
 class Solution {
-    public String solution(String myString) {
-        return myString.chars().mapToObj(operand -> String.valueOf((char) (Character.isLowerCase(operand) ? Character.toUpperCase(operand) : Character.toLowerCase(operand)))).collect(Collectors.joining());
+    public String solution(String my_string) {
+        String answer = "";
+        for(char c : my_string.toCharArray()) {
+            if(65 <= c && c <= 90) {
+                answer += (char)(c + 32);
+            } else {
+                answer += (char)(c - 32);
+            }
+        }
+        return answer;
     }
 }
