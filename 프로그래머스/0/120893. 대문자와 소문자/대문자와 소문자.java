@@ -1,13 +1,13 @@
 class Solution {
     public String solution(String my_string) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         for(char c : my_string.toCharArray()) {
-            if(65 <= c && c <= 90) {
-                answer += (char)(c + 32);
+            if(Character.isLowerCase(c)) {
+                sb.append(Character.toUpperCase(c));
             } else {
-                answer += (char)(c - 32);
+                sb.append(Character.toLowerCase(c));
             }
         }
-        return answer;
+        return sb.toString();
     }
 }
