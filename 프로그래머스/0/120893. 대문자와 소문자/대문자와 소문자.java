@@ -3,9 +3,9 @@ class Solution {
         String str = "";
         for(char c : my_string.toCharArray()) {
             if(65 <= c && c <= 90) {
-                str += (char)(c + 32);
+                str += Character.toLowerCase(c);
             } else {
-                str += (char)(c - 32);
+                str += Character.toUpperCase(c);
             }
         }
         return str;
