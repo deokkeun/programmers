@@ -8,7 +8,6 @@ class Solution {
                 index = i;
             }
         }
-        
         return new int[] {max, index};
     }
 }
