@@ -4,7 +4,7 @@ class Solution {
         for(int i=0; i<num_list.length; i++){
             if(num_list.length < 11) {
                 answer *= num_list[i];
-            }else{
+            } else {
                 answer += num_list[i];
             }
         }
