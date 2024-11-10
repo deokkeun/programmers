@@ -1,13 +1,13 @@
-import java.util.Arrays;
 class Solution {
     public int solution(int[] num_list) {
-        if(num_list.length > 10) {
-            return Arrays.stream(num_list).sum();
+        int answer = (num_list.length < 11 ? 1 : 0);
+        for(int i=0; i<num_list.length; i++){
+            if(num_list.length < 11) {
+                answer *= num_list[i];
+            }else{
+                answer += num_list[i];
+            }
         }
-        int sum = 1;
-        for(int i : num_list) {
-            sum *= i;
-        }
-        return sum;
+        return answer;
     }
 }
