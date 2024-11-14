@@ -12,7 +12,7 @@ class Solution {
         return arr1.length > arr2.length ? 1 : -1;
     }
     
-    public static int sum(int[] arr) {
+    int sum(int[] arr) {
         int sum = 0;
         for(int i : arr) {
             sum += i;
