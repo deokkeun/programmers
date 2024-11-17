@@ -1,16 +1,16 @@
 class Solution {
     public int solution(int[] num_list) {
-        int answer = 0;
-        String num1 = "";
-        String num2 = "";
-        for(int i = 0; i < num_list.length; i++) {
-            if(num_list[i] % 2 == 1) {
-                num1 += String.valueOf(num_list[i]);
+        int odd = 0;
+        int even = 0;
+        for(int i : num_list) {
+            if(i % 2 == 1) {
+                odd *= 10;
+                odd += i;
             } else {
-                num2 += String.valueOf(num_list[i]);
+                even *= 10;
+                even += i;
             }
         }
-        answer = Integer.parseInt(num1) + Integer.parseInt(num2);
-        return answer;
+        return odd + even;
     }
 }
