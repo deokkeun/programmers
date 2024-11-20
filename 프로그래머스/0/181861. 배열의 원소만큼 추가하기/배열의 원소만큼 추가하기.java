@@ -1,23 +1,13 @@
+import java.util.*;
 class Solution {
-    public int[] solution(int[] arr) {
-        int[] answer = {};
+    public ArrayList<Integer> solution(int[] arr) {
+        ArrayList<Integer> answer = new ArrayList<Integer>();
 
-        int sum = 0;
-
-        for(int i=0; i<arr.length; i++) {
-            sum += arr[i];    
-        }
-
-        answer = new int[sum];
-
-        int idx = 0;
-
-        for(int i=0; i<arr.length; i++) {
-            for(int j=0; j<arr[i]; j++) {
-                answer[idx++] = arr[i];
+        for (int i=0; i<arr.length; i++) {
+            for (int j=0; j<arr[i]; j++) {
+                answer.add(arr[i]);
             }
         }
-
         return answer;
     }
 }
