@@ -1,13 +1,14 @@
-import java.util.*;
-class Solution {
-    public ArrayList<Integer> solution(int[] arr) {
-        ArrayList<Integer> answer = new ArrayList<Integer>();
+import java.util.List;
+import java.util.ArrayList;
 
-        for (int i=0; i<arr.length; i++) {
-            for (int j=0; j<arr[i]; j++) {
-                answer.add(arr[i]);
+class Solution {
+    public List<Integer> solution(int[] arr) {
+        List<Integer> list = new ArrayList<Integer>();
+        for(int x = 0; x < arr.length; x++) {
+            for(int y = 0; y < arr[x]; y++) {
+                list.add(arr[x]);
             }
         }
-        return answer;
+        return list;
     }
 }
